@@ -163,10 +163,17 @@ namespace AbonentPacket
             {
 
                 string sURL = "";
+                if (AbonentPacket.Program.theForm._DepartID == 1)
+                {
+                    sURL = "http://10.200.2.85/info/innhf?account=" + this.account;
+                }
                 if (AbonentPacket.Program.theForm._DepartID == 2)
                 {
                     sURL = "http://10.200.2.85/info/inn?account=" + this.account;
-
+                }
+                if (AbonentPacket.Program.theForm._DepartID == 6)
+                {
+                    sURL = "http://10.200.2.85/info/innaf?account=" + this.account;
                 }
                 AbonentPacket.Program.logger_main.Debug("Document: GetInfoFromSTART: ConnectionString: " + sURL);
                 string sBody;
@@ -221,11 +228,21 @@ namespace AbonentPacket
             {
 
                 string sURL = "";
+                if (AbonentPacket.Program.theForm._DepartID == 1)
+                {
+                    sURL = "http://10.200.2.85/info/phonehf?account=" + this.account;
+                }
                 if (AbonentPacket.Program.theForm._DepartID == 2)
                 {
                     sURL = "http://10.200.2.85/info/phone?account=" + this.account;
 
                 }
+                if (AbonentPacket.Program.theForm._DepartID == 6)
+                {
+                    sURL = "http://10.200.2.85/info/phoneaf?account=" + this.account;
+
+                }
+
                 AbonentPacket.Program.logger_main.Debug("Document: GetInfoFromSTART: ConnectionString: " + sURL);
                 string sBody;
 
@@ -284,10 +301,17 @@ namespace AbonentPacket
             {
 
                 string sURL = "";
+                if (AbonentPacket.Program.theForm._DepartID == 1)
+                {
+                    sURL = "http://10.200.2.85/info/namehf?account=" + this.account;
+                }
                 if (AbonentPacket.Program.theForm._DepartID == 2)
                 {
                     sURL = "http://10.200.2.85/info/name?account=" + this.account;
-
+                }
+                if (AbonentPacket.Program.theForm._DepartID == 6)
+                {
+                    sURL = "http://10.200.2.85/info/nameaf?account=" + this.account;
                 }
                 AbonentPacket.Program.logger_main.Debug("Document: GetInfoFromSTART: ConnectionString: " + sURL);
                 string sBody;

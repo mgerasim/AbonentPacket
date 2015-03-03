@@ -322,6 +322,8 @@ namespace AbonentPacket
 
             timer1.Start();            
             this.EnableDocumentForm(false);
+            Program.theThreadSender.Start();
+            Program.theThreadConvert.Start();  
         }
 
         private void listBoxAccount_DrawItem(object sender, DrawItemEventArgs e)
